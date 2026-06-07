@@ -1,0 +1,137 @@
+/* Animação do Robô e Gato */
+.robot-cat-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.robot {
+    position: absolute;
+    width: 120px;
+    height: 180px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 20px;
+    left: 50px;
+    top: 180px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+.robot-head {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #c0c0c0, #e0e0e0);
+    border-radius: 15px;
+    top: -40px;
+    left: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.robot-eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    top: 25px;
+    left: 20px;
+    animation: blink 5s infinite;
+}
+
+.robot-eye.right {
+    left: 40px;
+}
+
+.robot-body {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #d0d0d0, #f0f0f0);
+    border-radius: 15px;
+    top: 50px;
+    left: 10px;
+}
+
+.cat {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background: linear-gradient(145deg, #ff9800, #ffb74d);
+    border-radius: 40% 40% 0 0;
+    right: 50px;
+    bottom: 70px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: float 3.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+.cat-ear {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(145deg, #ff9800, #ffb74d);
+    top: -20px;
+}
+
+.cat-ear.left {
+    left: 15px;
+    transform: rotate(-30deg);
+    border-radius: 50% 50% 0 0;
+}
+
+.cat-ear.right {
+    right: 15px;
+    transform: rotate(30deg);
+    border-radius: 50% 50% 0 0;
+}
+
+.cat-eye {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 20px;
+    left: 25px;
+}
+
+.cat-eye.right {
+    left: 55px;
+}
+
+.cat-nose {
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    background-color: #ff5252;
+    border-radius: 50%;
+    top: 35px;
+    left: 45px;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    95%,
+    100% {
+        height: 20px;
+    }
+
+    97% {
+        height: 2px;
+    }
+}

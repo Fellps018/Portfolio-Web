@@ -1,0 +1,173 @@
+/*Global*/
+:root,
+html.light-mode {
+    --background-color: rgb(255, 255, 255);
+    --background-button: rgb(0, 0, 0);
+    --background-button-hover: rgba(0, 0, 0, 0.484);
+    --background-button-active: rgba(0, 0, 0, 0.658);
+    --text-color: rgb(0, 0, 0);
+    --text-button-color: rgb(255, 255, 255);
+    --destaque: rgb(90, 41, 117);
+    --contorno: rgba(0, 0, 0, 0.2);
+}
+
+
+/*Preference theme*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(18, 18, 18);
+        --contorno: rgba(132, 132, 132, 0.2);
+        --background-button: rgb(255, 255, 255);
+        --background-button-hover: rgba(255, 255, 255, 0.4);
+        --background-button-active: rgba(255, 255, 255, 0.2);
+        --text-color: rgb(255, 255, 255);
+        --text-button-color: rgb(0, 0, 0);
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.btn-primary {
+    margin-right: 6px;
+    margin-top: 20px;
+    padding: 20px 40px;
+    width: auto;
+    color: var(--text-button-color);
+    background-color: var(--background-button);
+    border-radius: 8px;
+    transition-duration: 400ms;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--background-button-hover);
+    transition-duration: 400ms;
+}
+
+.btn-primary:active {
+    background-color: var(--background-button-active);
+    transition-duration: 400ms;
+}
+
+.btn-secondary {
+    margin-right: 6px;
+    margin-top: 20px;
+    padding: 20px 40px;
+    width: auto;
+    color: var(--text-color);
+    border: 1px solid var(--background-button);
+    background-color: transparent;
+    border-radius: 8px;
+    transition-duration: 400ms;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    color: var(--text-button-color);
+    background-color: var(--background-button);
+    transition-duration: 400ms;
+}
+.btn-secondary:active {
+    color: var(--text-button-color);
+    border: 1px solid transparent;
+    background-color: var(--background-button-active);
+    transition-duration: 400ms;
+}
+
+.span-title {
+    color: var(--destaque);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* From Uiverse.io by AqFox */
+.controle {
+    position: relative;
+    top: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+}
+
+.spinner>div {
+    background-color: rgba(166, 0, 255, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #8000af;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
+.load {
+    margin-top: 50px;
+    font-size: 20px;
+    color: #bb00ff;
+}

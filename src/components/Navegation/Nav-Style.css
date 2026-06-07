@@ -1,0 +1,322 @@
+/*Global*/
+:root,
+html.light-mode {
+    --background-navBar: rgba(255, 255, 255, 0.5);
+    --background-mobile: rgb(199, 199, 199);
+    --contorno-nav: rgba(0, 0, 0, 0.2);
+    --link-color: rgb(0, 0, 0);
+    --link-hover: rgba(0, 0, 0, 0.2);
+    --link-active: rgba(0, 0, 0, 0.35);
+    --section-bg: rgb(255, 255, 255);
+    --nav-mobile-bg: rgba(255, 255, 255, 0.95);
+}
+
+/*Preference theme*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-navBar: rgba(0, 0, 0, 0.4);
+        --background-mobile: rgb(20, 20, 20);
+        --contorno-nav: rgba(132, 132, 132, 0.2);
+        --link-color: rgb(255, 255, 255);
+        --link-hover: rgba(211, 211, 211, 0.2);
+        --link-active: rgba(211, 211, 211, 0.35);
+        --section-bg: rgb(30, 30, 30);
+        --nav-mobile-bg: rgba(20, 20, 20, 0.95);
+    }
+}
+
+/*theme padrão*/
+.header {
+    position: fixed;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-navBar);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(100px);
+    z-index: 10;
+}
+
+.header-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.image {
+    position: relative;
+    font-size: medium;
+    font-style: oblique;
+    margin: 8px;
+    margin-left: 24px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px var(--contorno);
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+}
+.image:active {
+    transform: scale(0.99);
+}
+
+.nav {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 50px;
+    align-items: center;
+    height: auto;
+    width: auto;
+    gap: 0.5rem;
+    transition: all 0.4s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    transition: all 0.25s;
+    background-color: var(--link-hover);
+}
+.nav-link:active {
+    transition: all 0.25s;
+    background-color: var(--link-active);
+}
+
+.menu-toggle {
+    position: relative;
+    height: auto;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    background-color: var(--destaque);
+    color: white;
+    border-radius: 24px;
+    padding: 14px 24px;
+    margin: 8px;
+    margin-right: 24px;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    border: none;
+    gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.menu-toggle:hover {
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 2px 2px 10px 10px var(--contorno);
+    transform: translateY(-1.5px);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--destaque);
+    border: none;
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: var(--destaque);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay para menu móvel */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+
+/* Conteúdo principal para demonstrar o scroll */
+.content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background-color: var(--section-bg);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px var(--contorno);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--link-color);
+    border-bottom: 3px solid var(--destaque);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1100px) {
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .menu-toggle {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-link {
+        padding: 10px 12px;
+        margin: 5px;
+    }
+
+    .menu-toggle {
+        padding: 10px 16px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 792px) {
+    .header-container {
+        padding: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav {
+        background-color: var(--background-mobile);
+        border-top: 1px solid #0000001a;
+        box-shadow: 0 10px 20px #0000001a;
+        display: none;
+        flex-direction: column;
+        left: 0;
+        padding: 20px;
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        z-index: 12;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+        padding: 15px;
+        border-radius: 24px;
+        font-size: 1.1rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        width: 90%;
+        margin: 20px auto 10px;
+        justify-content: center;
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    .mobile-menu-btn {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+    }
+
+    .nav {
+        top: 70px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}

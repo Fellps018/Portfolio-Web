@@ -1,0 +1,122 @@
+:root,
+html.light-mode {
+    --contorno: rgba(0, 0, 0, 0.2);
+    --destaque: rgb(90, 41, 117);
+    --contorno-table: rgba(0, 0, 0, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --destaque: rgb(90, 41, 117);
+        --contorno-table: rgba(111, 111, 111, 0.2);
+    }
+}
+
+
+.Space-Section{
+position: relative;
+padding: 16%;
+width: auto;
+height: auto;
+top: 40px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.Space-Section-tables{
+background-color: transparent;
+height: auto;
+width: auto;
+display: flex;
+flex-wrap: wrap;
+}
+.tables{
+background-color: transparent;
+width: auto;
+height: auto;
+padding: 8%;
+border-radius: 16px;
+box-shadow: 0 8px 20px var(--contorno-table);
+color: var(--text-color);
+}
+.obra-text{
+padding: 0px;
+margin: 0px;
+position: relative;
+color: var(--text-color);
+font-weight: bold;
+}
+.author-text{
+padding: 0px;
+margin: 0px;
+position: relative;
+color: gray;
+font-weight: normal;
+}
+.tables-2{
+width: auto;
+height: auto;
+padding-top: 3%;
+display: grid;
+grid-template-columns: 2fr 2fr 2fr;
+flex-wrap: wrap;
+}
+.tables-min{
+background-color: transparent;
+width: auto;
+height: auto;
+padding-top: 2%;
+padding-bottom: 2%;
+padding-left: 8%;
+padding-right: 8%;
+margin-left: 8px;
+margin-right: 8px;
+border-radius: 16px;
+box-shadow: 0 2px 15px var(--contorno-table);
+transition: 400ms;
+flex-wrap: wrap;
+color: var(--text-color);
+}
+.text-tables{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: lighter;
+font-style: italic;
+}
+
+
+.div-item{
+width: auto;
+display: flex;
+}
+.item{
+border-radius: 12px;
+padding: 10px 14px 10px 14px;
+color: white;
+flex-wrap: wrap;
+background-color: var(--destaque);
+}
+.div-text{
+color: rgb(105, 104, 104);
+}
+
+@media screen and (max-width: 792px) {
+.tables {
+        padding: 12%;
+    }
+
+.tables-2 {
+        width: auto;
+        height: auto;
+        padding-top: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+.tables-min {
+    margin-top: 24px;
+}
+}
