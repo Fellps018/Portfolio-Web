@@ -3,10 +3,12 @@
 html.light-mode {
         --background-card: rgba(128, 128, 128, 0);
         --card-description: gray;
+        --skills-background: #f7fafc;
 }
 html.dark-mode {
         --background-card: rgb(25, 25, 25);
-        --card-description: rgb(159, 159, 159);
+        --card-description: rgb(199, 199, 199);
+        --skills-background: rgb(77, 77, 77);
     }
 
 
@@ -202,13 +204,13 @@ flex-wrap: wrap;
 }
 
 .tech-tag {
-    background: #f7fafc;
-    color: gray;
+    background: var(--skills-background);
+    color: rgb(162, 161, 161);
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 500;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--contorno-table);
     transition: all 0.2s ease;
     flex-shrink: 0;
     /* Impede que as tags encolham */

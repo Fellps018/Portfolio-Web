@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './button.css'
+import "./button.css";
 
 export default function ThemeToggle() {
     const [theme, setTheme] = useState(
@@ -15,17 +15,23 @@ export default function ThemeToggle() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
-    const toggleTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
-    };
-
     return (
         <button
-            className="btn-secondary" id="button-theme"
-            onClick={toggleTheme}
+            id="button-theme"
+            className="btn-secondary"
+            onClick={() =>
+                setTheme(theme === "light" ? "dark" : "light")
+            }
+            title="Trocar tema"
+            aria-label="Trocar tema"
         >
-            {theme === "light" ? "🌙 Escuro" : "☀️ Claro"}
+            <i
+                className={`fa-solid ${
+                    theme === "light"
+                        ? "fa-moon"
+                        : "fa-sun"
+                }`}
+            ></i>
         </button>
     );
 }
-
