@@ -4,15 +4,12 @@ html.light-mode {
     --contorno: rgba(0, 0, 0, 0.2);
     --destaque: rgb(90, 41, 117);
 }
-
-/*Preference theme*/
-@media (prefers-color-scheme: dark) {
-    :root {
+html.dark-mode {
         --destaque: rgb(90, 41, 117);
         --contorno: rgba(50, 50, 50, 0.2);
         --text-color: rgb(240, 240, 240);
     }
-}
+
 
 /* Hero Section */
 .hero {

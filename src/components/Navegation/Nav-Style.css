@@ -10,10 +10,7 @@ html.light-mode {
     --section-bg: rgb(255, 255, 255);
     --nav-mobile-bg: rgba(255, 255, 255, 0.95);
 }
-
-/*Preference theme*/
-@media (prefers-color-scheme: dark) {
-    :root {
+html.dark-mode {
         --background-navBar: rgba(0, 0, 0, 0.4);
         --background-mobile: rgb(20, 20, 20);
         --contorno-nav: rgba(132, 132, 132, 0.2);
@@ -23,7 +20,7 @@ html.light-mode {
         --section-bg: rgb(30, 30, 30);
         --nav-mobile-bg: rgba(20, 20, 20, 0.95);
     }
-}
+
 
 /*theme padrão*/
 .header {

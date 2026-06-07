@@ -5,11 +5,13 @@ import Hero from './components/Hero/Hero.jsx'
 import Section from './components/Section/Section.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import ThemeToggle from './components/Button/Button.jsx'
 
 function App() {
 
   return (
     <>
+    <ThemeToggle />
     <Nav />
     <Hero />
     <Section />

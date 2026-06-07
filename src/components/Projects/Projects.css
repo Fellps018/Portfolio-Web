@@ -4,13 +4,11 @@ html.light-mode {
         --background-card: rgba(128, 128, 128, 0);
         --card-description: gray;
 }
-/*Preference theme*/
-@media (prefers-color-scheme: dark) {
-    :root {
+html.dark-mode {
         --background-card: rgb(25, 25, 25);
         --card-description: rgb(159, 159, 159);
     }
-}
+
 
 .Projects{
 position: relative;

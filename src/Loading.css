@@ -11,20 +11,15 @@ html.light-mode {
     --contorno: rgba(0, 0, 0, 0.2);
 }
 
-
-/*Preference theme*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: rgb(18, 18, 18);
-        --contorno: rgba(132, 132, 132, 0.2);
-        --background-button: rgb(255, 255, 255);
-        --background-button-hover: rgba(255, 255, 255, 0.4);
-        --background-button-active: rgba(255, 255, 255, 0.2);
-        --text-color: rgb(255, 255, 255);
-        --text-button-color: rgb(0, 0, 0);
-    }
+html.dark-mode {
+    --background-color: rgb(18, 18, 18);
+    --contorno: rgba(132, 132, 132, 0.2);
+    --background-button: rgb(255, 255, 255);
+    --background-button-hover: rgba(255, 255, 255, 0.4);
+    --background-button-active: rgba(255, 255, 255, 0.2);
+    --text-color: rgb(255, 255, 255);
+    --text-button-color: rgb(0, 0, 0);
 }
-
 
 html {
     scroll-behavior: smooth;
