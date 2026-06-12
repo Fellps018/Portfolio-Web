@@ -11,5 +11,5 @@ Este site é um projeto pessoal, com atualizações constantes e protegido com c
 
 ## Como reportar em caso de Vulnerabilidade: 
 
-Me contate pessoalmente, por meio dos contatos disponível
+Me contate pessoalmente, por meio do contato disponível
 no meu perfil.
