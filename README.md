@@ -115,56 +115,6 @@ portfolio/
 
 ---
 
-## ⚙️ Instalação
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-
-Entre na pasta:
-
-```bash
-cd portfolio
-```
-
-Instale as dependências:
-
-```bash
-npm install
-```
-
-Execute o projeto:
-
-```bash
-npm run dev
-```
-
-O projeto estará disponível em:
-
-```bash
-http://localhost:5173
-```
-
----
-
-## 🚀 Build para Produção
-
-Gerar build:
-
-```bash
-npm run build
-```
-
-Visualizar build local:
-
-```bash
-npm run preview
-```
-
----
-
 ## 📱 Responsividade
 
 O projeto foi desenvolvido para funcionar em:
@@ -186,17 +136,6 @@ O projeto foi desenvolvido para funcionar em:
 - Reutilização de Componentes
 - Performance com Vite
 - Navegação Intuitiva
-
----
-
-## 📞 Contato
-
-Caso tenha interesse em colaborar ou entrar em contato:
-
-- GitHub: https://github.com/Fellps018
-- LinkedIn: Adicionar perfil
-- E-mail: Adicionar e-mail
-- WhatsApp: Adicionar número
 
 ---
 
