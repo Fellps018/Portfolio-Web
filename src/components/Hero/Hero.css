@@ -41,6 +41,8 @@ html.dark-mode {
 .hero-subtitle {
     margin-top: 1px;
     font-size: 24px;
+    font-weight: lighter;
+    font-style: oblique;
     color: var(--text-color);
 }
 

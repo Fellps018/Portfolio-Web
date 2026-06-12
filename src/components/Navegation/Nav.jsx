@@ -47,7 +47,7 @@ const Nav = () => {
     return (
         <header className="header">
             <div className="header-container">
-                <a title="Sobre mim" href="https://fellps018.github.io/Error-404/" className="logo-link" onClick={(e) => handleNavClick(e, 'home')}>
+                <a title="Sobre mim" href="https://fellps018.github.io/Error-404/" className="logo-link">
                     <img className="image" src="src/components/Navegation/Images/Trabalho.jpeg" alt="Foto de perfil"/>
                 </a>
                 

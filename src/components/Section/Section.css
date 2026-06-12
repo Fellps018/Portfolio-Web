@@ -81,7 +81,7 @@ flex-wrap: wrap;
 color: var(--text-color);
 }
 .text-tables{
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-family: Georgia, 'Times New Roman', Times, serif;
 font-weight: lighter;
 font-style: italic;
 }

@@ -31,7 +31,7 @@ const Footer  = () => {
                     </div>
                 </div>
                 <div class="div-p">
-                <p class="p"><span id="year">{YearDisplay()}©</span> Felipe Catarino de Souza. Todos os direitos reservados.</p>
+                <p class="p"><small><span id="year">{YearDisplay()}©</span> Felipe Catarino de Souza. Todos os direitos reservados.</small></p>
                 </div>
             </div>
     )
