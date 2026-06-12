@@ -1,4 +1,4 @@
-# 🚀 Portfólio Pessoal - Felipe Catarino
+# 🚀 Portfólio Pessoal 
 
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-Fast%20Build-purple?logo=vite)
