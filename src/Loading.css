@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 .btn-primary {
     margin-right: 6px;
     margin-top: 20px;
-    padding: 20px 40px;
+    padding: 10px 30px;
     width: auto;
     color: var(--text-button-color);
     background-color: var(--background-button);
@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
 .btn-secondary {
     margin-right: 6px;
     margin-top: 20px;
-    padding: 20px 40px;
+    padding: 10px 30px;
     width: auto;
     color: var(--text-color);
     border: 1px solid var(--background-button);
